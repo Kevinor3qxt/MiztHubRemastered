@@ -1,0 +1,124 @@
+-- Example made by twink marie
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+local Window = Material.Load({
+    Title = "Mizt Hub Remastered",
+    Style = 3,
+    SizeX = 500,
+    SizeY = 350,
+    Theme = "Light",
+    ColorOverrides = {
+        MainFrame = Color3.fromRGB(235,235,235)
+    }
+})
+
+local ReTab = Window.New({
+    Title = "Reanimations"
+})
+
+local FeTab = Window.New({
+    Title = "Fe Scripts"
+})
+
+local Button = ReTab.Button({
+    Text = "Simple Reanimate",
+    Callback = function()
+        		_G.MiztReanimSettings = {
+    PermanentDeath = false,
+    NoHeadPermanentDeath = false,
+    Noclip = true,
+    HatReanimate = false,
+    SemiHatReanimate = false,
+    UseMizaruTorso = false,
+    FlingActive = false,
+    AlignMethod = true,
+    Netless = true,
+    ActiveLegacyNet = true,
+    NetlessVelocity = {0,0,-50}
+}
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Sylixe/Scripts/main/MiztReanimate.lua',true))()
+    end,
+})
+local Button = ReTab.Button({
+    Text = "PermaDeath Reanimate",
+    Callback = function()
+        		_G.MiztReanimSettings = {
+    PermanentDeath = true,
+    NoHeadPermanentDeath = false,
+    Noclip = true,
+    HatReanimate = false,
+    SemiHatReanimate = false,
+    UseMizaruTorso = false,
+    FlingActive = false,
+    AlignMethod = true,
+    Netless = true,
+    ActiveLegacyNet = true,
+    NetlessVelocity = {0,0,-50}
+}
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Sylixe/Scripts/main/MiztReanimate.lua',true))()
+    end,
+})
+local Button = ReTab.Button({
+    Text = "Fling Reanimate",
+    Callback = function()
+        		_G.MiztReanimSettings = {
+    PermanentDeath = false,
+    NoHeadPermanentDeath = false,
+    Noclip = true,
+    HatReanimate = false,
+    SemiHatReanimate = false,
+    UseMizaruTorso = false,
+    FlingActive = true,
+    AlignMethod = true,
+    Netless = true,
+    ActiveLegacyNet = true,
+    NetlessVelocity = {0,0,-50}
+}
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Sylixe/Scripts/main/MiztReanimate.lua',true))()
+    end,
+})
+local Button = FeTab.Button({
+    Text = "Gale Fighter",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/Gale%20Fighter"))()
+    end,
+})
+local Button = FeTab.Button({
+	Text = "Chill",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/Chill"))()
+	end,
+})
+local Button = FeTab.Button({
+	Text = "Krystal Dance V1",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/krystal%20dance%20v1"))()
+	end,
+})
+local Button = FeTab.Button({
+	Text = "Krystal Dance V2",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/krystal%20dance%20v2"))()
+	end,
+})
+local Button = FeTab.Button({
+	Text = "Sonic",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/Sonic"))()
+	end,
+})
+local Button = FeTab.Button({
+	Text = "Ender",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/ender"))()
+	end,
+})
+local Button = FeTab.Button({
+	Text = "Magic Unknown",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/Magic"))()
+	end,
+})
