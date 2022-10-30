@@ -1,126 +1,88 @@
--- Gui to Lua
--- Version: 3.2
+local Player = game.Players.LocalPlayer
 
--- Instances:
+Player.Chatted:connect(function(cht)
+	if cht:match(".SimpleRe") then
+		_G.MiztReanimSettings = {
+    PermanentDeath = false,
+    NoHeadPermanentDeath = false,
+    Noclip = true,
+    HatReanimate = false,
+    SemiHatReanimate = false,
+    UseMizaruTorso = false,
+    FlingActive = false,
+    AlignMethod = true,
+    Netless = true,
+    ActiveLegacyNet = true,
+    NetlessVelocity = {0,0,-50}
+}
 
-local Frame = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local TextLabel_2 = Instance.new("TextLabel")
-local TextLabel_3 = Instance.new("TextLabel")
-local TextLabel_4 = Instance.new("TextLabel")
-local TextLabel_5 = Instance.new("TextLabel")
-local TextLabel_6 = Instance.new("TextLabel")
-local TextLabel_7 = Instance.new("TextLabel")
-local TextLabel_8 = Instance.new("TextLabel")
-local TextLabel_9 = Instance.new("TextLabel")
-local TextLabel_10 = Instance.new("TextLabel")
-local TextButton = Instance.new("TextButton")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Sylixe/Scripts/main/MiztReanimate.lua',true))() -- make sure you add in the script too
+	elseif cht:match(".PermadeathRe") then -- add what you want to say for the script to execute so i put "admin" because i want it to load an admin script
+		_G.MiztReanimSettings = {
+    PermanentDeath = true,
+    NoHeadPermanentDeath = false,
+    Noclip = true,
+    HatReanimate = false,
+    SemiHatReanimate = false,
+    UseMizaruTorso = false,
+    FlingActive = false,
+    AlignMethod = true,
+    Netless = true,
+    ActiveLegacyNet = true,
+    NetlessVelocity = {0,0,-50}
+}
 
---Properties:
-
-Frame.Parent = game.CoreGui
-Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.Position = UDim2.new(0.0356778689, 0, 0.650366724, 0)
-Frame.Size = UDim2.new(0, 315, 0, 243)
-
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.Size = UDim2.new(0, 315, 0, 50)
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "._.    -   Commands list"
-TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel.TextSize = 14.000
-
-TextLabel_2.Parent = Frame
-TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_2.Position = UDim2.new(0.0253968276, 0, 0.263636351, 0)
-TextLabel_2.Size = UDim2.new(0, 90, 0, 50)
-TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = ".Reset"
-TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_2.TextSize = 14.000
-
-TextLabel_3.Parent = Frame
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.Position = UDim2.new(0.333333343, 0, 0.263636351, 0)
-TextLabel_3.Size = UDim2.new(0, 90, 0, 50)
-TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = ".SimpleRe"
-TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.TextSize = 14.000
-
-TextLabel_4.Parent = Frame
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.Position = UDim2.new(0.653968275, 0, 0.263636351, 0)
-TextLabel_4.Size = UDim2.new(0, 90, 0, 50)
-TextLabel_4.Font = Enum.Font.SourceSans
-TextLabel_4.Text = ".PermadeathRe"
-TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.TextSize = 14.000
-
-TextLabel_5.Parent = Frame
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.Position = UDim2.new(0.0253968276, 0, 0.527272701, 0)
-TextLabel_5.Size = UDim2.new(0, 90, 0, 50)
-TextLabel_5.Font = Enum.Font.SourceSans
-TextLabel_5.Text = "FlingRe"
-TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_5.TextSize = 14.000
-
-TextLabel_6.Parent = Frame
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.Position = UDim2.new(0.333333343, 0, 0.527272701, 0)
-TextLabel_6.Size = UDim2.new(0, 90, 0, 50)
-TextLabel_6.Font = Enum.Font.SourceSans
-TextLabel_6.Text = ".GaleFighter"
-TextLabel_6.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_6.TextSize = 14.000
-
-TextLabel_7.Parent = Frame
-TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.Position = UDim2.new(0.653968275, 0, 0.527272701, 0)
-TextLabel_7.Size = UDim2.new(0, 90, 0, 50)
-TextLabel_7.Font = Enum.Font.SourceSans
-TextLabel_7.Text = ".Sonic"
-TextLabel_7.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_7.TextSize = 14.000
-
-TextLabel_8.Parent = Frame
-TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_8.Position = UDim2.new(0.0253968276, 0, 0.765693963, 0)
-TextLabel_8.Size = UDim2.new(0, 90, 0, 50)
-TextLabel_8.Font = Enum.Font.SourceSans
-TextLabel_8.Text = ".Magic"
-TextLabel_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_8.TextSize = 14.000
-
-TextLabel_9.Parent = Frame
-TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.Position = UDim2.new(0.333333343, 0, 0.761578739, 0)
-TextLabel_9.Size = UDim2.new(0, 90, 0, 50)
-TextLabel_9.Font = Enum.Font.SourceSans
-TextLabel_9.Text = ".Ender"
-TextLabel_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_9.TextSize = 14.000
-
-TextLabel_10.Parent = Frame
-TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.Position = UDim2.new(0.653968275, 0, 0.761578739, 0)
-TextLabel_10.Size = UDim2.new(0, 90, 0, 50)
-TextLabel_10.Font = Enum.Font.SourceSans
-TextLabel_10.Text = ".KrystalDance"
-TextLabel_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_10.TextSize = 14.000
-
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextButton.Position = UDim2.new(0.90476191, 0, 0, 0)
-TextButton.Size = UDim2.new(0, 29, 0, 25)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "X"
-TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.TextSize = 14.000
-
-TextButton.MouseButton1Click:connect(function()
-Frame.visible = true
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Sylixe/Scripts/main/MiztReanimate.lua',true))()
+	end
 end)
+Player.Chatted:connect(function(cht)
+	if cht:match(".FlingRe") then
+		_G.MiztReanimSettings = {
+    PermanentDeath = false,
+    NoHeadPermanentDeath = false,
+    Noclip = true,
+    HatReanimate = false,
+    SemiHatReanimate = false,
+    UseMizaruTorso = false,
+    FlingActive = true,
+    AlignMethod = true,
+    Netless = true,
+    ActiveLegacyNet = true,
+    NetlessVelocity = {0,0,-50}
+}
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Sylixe/Scripts/main/MiztReanimate.lua',true))()
+
+elseif cht:match(".GaleFighter") then -- add what you want to say for the script to execute so i put "admin" because i want it to load an admin script
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/Gale%20Fighter"))()
+	end
+end)
+Player.Chatted:connect(function(cht)
+	if cht:match(".Sonic") then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/Sonic"))()
+elseif cht:match('.KrystalDance') then
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/krystal%20dance%20v2"))()
+    end
+end)
+Player.Chatted:connect(function(cht)
+	if cht:match(".Magic") then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/Magic"))()
+elseif cht:match('.Ender') then
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/ender"))()
+    end
+end)
+Player.Chatted:connect(function(cht)
+	if cht:match(".Reset") then
+        game.Players.LocalPlayer.Character:BreakJoints()
+elseif cht:match('.Cmds')  then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/MiztHubRemastered/main/Cmdlist"))()
+    end
+end)
+
+
+-- now we're going to add a simple script that lets us know when the script is working
+
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "._. Admin";
+    Text = "W Priv Cmds";
+})
