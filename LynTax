@@ -1,0 +1,135 @@
+local Mercury = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
+local GUI = Mercury:Create{
+    Name = "LynTax",
+    Size = UDim2.fromOffset(600, 400),
+    Theme = Mercury.Themes.Dark,
+    Link = "Https://LynTax.Xyz"
+}
+local ReTab = GUI:Tab{
+	Name = "Reanimations",
+	Icon = "rbxassetid://8569322835"
+}
+local FeTab = GUI:Tab{
+	Name = "R6/R15",
+	Icon = "rbxassetid://8569322835"
+}
+local FeNoTab = GUI:Tab{
+	Name = "No Hats",
+	Icon = "rbxassetid://8569322835"
+}
+ReTab:Button{
+	Name = "Simple Reanimate",
+	Description = 'Normal reanimate works well with R15 Also',
+	Callback = function()
+    _G.MiztReanimSettings = {
+    PermanentDeath = false,
+    NoHeadPermanentDeath = false,
+    Noclip = true,
+    HatReanimate = false,
+    SemiHatReanimate = false,
+    UseMizaruTorso = false,
+    FlingActive = false,
+    AlignMethod = true,
+    Netless = true,
+    ActiveLegacyNet = true,
+    NetlessVelocity = {0,0,-50}
+}
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Sylixe/Scripts/main/MiztReanimate.lua',true))()
+   end
+}
+ReTab:Button{
+	Name = "Fling Reanimate",
+	Description = "Simple reanimate with fling",
+	Callback = function()
+    _G.MiztReanimSettings = {
+    PermanentDeath = false,
+    NoHeadPermanentDeath = false,
+    Noclip = true,
+    HatReanimate = false,
+    SemiHatReanimate = false,
+    UseMizaruTorso = false,
+    FlingActive = true,
+    AlignMethod = true,
+    Netless = true,
+    ActiveLegacyNet = true,
+    NetlessVelocity = {0,0,-50}
+}
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Sylixe/Scripts/main/MiztReanimate.lua',true))()
+   end
+}
+ReTab:Button{
+	Name = "Permadeath reanimate",
+	Description = "kills you then reanimates",
+	Callback = function()
+    _G.MiztReanimSettings = {
+    PermanentDeath = true,
+    NoHeadPermanentDeath = false,
+    Noclip = true,
+    HatReanimate = false,
+    SemiHatReanimate = false,
+    UseMizaruTorso = false,
+    FlingActive = false,
+    AlignMethod = true,
+    Netless = true,
+    ActiveLegacyNet = true,
+    NetlessVelocity = {0,0,-50}
+}
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Sylixe/Scripts/main/MiztReanimate.lua',true))()
+   end
+}
+FeTab:Button{
+	Name = "Gale Fighter",
+	Description = nil,
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/Gale%20Fighter"))()
+   end
+}
+FeTab:Button{
+	Name = "Sonic",
+	Description = nil,
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/Sonic"))()
+   end
+}
+FeTab:Button{
+	Name = "Krystal dance",
+	Description = nil,
+	Callback = function() 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/krystal%20dance%20v2"))()
+   end
+}
+FeTab:Button{
+	Name = "Magic Unknown",
+	Description = nil,
+	Callback = function() 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/Magic"))()
+   end
+}
+FeTab:Button{
+	Name = "Ender",
+	Description = nil,
+	Callback = function() 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/ender"))()
+   end
+}
+GUI:Credit{
+	Name = "3qxt",
+	Description = "Made the FE scripts",
+	V3rm = "",
+	Discord = "3qxt#9919"
+}
+GUI:Credit{
+	Name = "Mizt",
+	Description = "Made Reanimation",
+	V3rm = "",
+	Discord = "Idk his cord"
+}
+GUI:Notification{
+	Title = "Updates",
+	Text = "Added no hats tab",
+	Duration = 10,
+	Callback = function() end
+}
