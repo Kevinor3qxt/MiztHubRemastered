@@ -18,6 +18,13 @@ local FeNoTab = GUI:Tab{
 	Icon = "rbxassetid://8569322835"
 }
 ReTab:Button{
+	Name = "New LynTax reanimate",
+	Description = 'Normal reanimate, Go to the Lyntax tab to see scripts that work with this reanimate',
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/MiztHubRemastered/main/Lyntax%20reanimate"))()
+   end
+}
+ReTab:Button{
 	Name = "Simple Reanimate",
 	Description = 'Normal reanimate works well with R15 Also',
 	Callback = function()
