@@ -17,6 +17,10 @@ local FeNoTab = GUI:Tab{
 	Name = "No Hats",
 	Icon = "rbxassetid://8569322835"
 }
+local LynTab = GUI:Tab{
+	Name = "Lyntax",
+	Icon = "rbxassetid://8569322835"
+}
 ReTab:Button{
 	Name = "New LynTax reanimate",
 	Description = 'Normal reanimate, Go to the Lyntax tab to see scripts that work with this reanimate',
@@ -122,6 +126,13 @@ FeTab:Button{
  loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/FeScripts/main/ender"))()
    end
 }
+LynTab:Button{
+	Name = "Lyn Gale",
+	Description = 'only works with Lyntax reanimation',
+	Callback = function() 
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/Kevinor3qxt/MiztHubRemastered/main/Lyntax%20gale"))()
+   end
+}
 GUI:Credit{
 	Name = "3qxt",
 	Description = "Made the FE scripts",
@@ -136,7 +147,7 @@ GUI:Credit{
 }
 GUI:Notification{
 	Title = "Updates",
-	Text = "Added no hats tab",
+	Text = "Added no hats tab, Lyntax reanimation",
 	Duration = 10,
 	Callback = function() end
 }
