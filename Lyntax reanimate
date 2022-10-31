@@ -29,15 +29,15 @@ local Reanimated = true
 
 if Humanoid.RigType == Enum.HumanoidRigType.R15 then
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[CoolHubTutorial] You are on R15! Please use the R15 Reanimation instead.",
+        Text = "[LynTax] You are on R15! Please use the R15 Reanimation instead.",
         Color = Color3.fromRGB(255, 10, 70),
         TextSize = 18,
         Font = Enum.Font.Ubuntu
     });
 return end
-if game.Players.LocalPlayer.Character:FindFirstChild("CoolHubTutorial") or workspace:FindFirstChild("CoolHubTutorial") then
+if game.Players.LocalPlayer.Character:FindFirstChild("LynTax") or workspace:FindFirstChild("LynTax") then
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
-        Text = "[CoolHubTutorial] You are already reanimated! Please reset to unreanimate.",
+        Text = "[LynTax] You are already reanimated! Please reset to unreanimate.",
         Color = Color3.fromRGB(255, 10, 70),
         TextSize = 18,
         Font = Enum.Font.Ubuntu
@@ -58,8 +58,8 @@ end)
 -- Start reanimation
 game:WaitForChild("Run Service").Heartbeat:Connect(function()
     if Reanimated == true then
-        if Character.CoolHubTutorial then
-            Character.Torso.CFrame=Character.CoolHubTutorial.Torso.CFrame
+        if Character.LynTax then
+            Character.Torso.CFrame=Character.LynTax.Torso.CFrame
         end
 		RightArm.Velocity = _G.Velocity
         RightLeg.Velocity =_G.Velocity
@@ -82,9 +82,9 @@ end)
 
 local CopyCharacter = Character:Clone()
 CopyCharacter.Parent = Character 
-CopyCharacter.Name = "CoolHubTutorial" -- you can always change name.
+CopyCharacter.Name = "LynTax" 
 
-for k,l in pairs(Character.CoolHubTutorial:GetDescendants()) do 
+for k,l in pairs(Character.LynTax:GetDescendants()) do 
     if l:IsA("Part") or l:IsA("Decal") then
     l.Transparency=1
 end
